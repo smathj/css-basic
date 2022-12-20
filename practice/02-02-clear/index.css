@@ -17,6 +17,12 @@
 }
 
 
-.box3 {
+/* *both 전용 엘리먼트*/
+.clearfix {
     clear: both;
 }
+
+/*
+.box3 {
+    clear: both;
+}*/
