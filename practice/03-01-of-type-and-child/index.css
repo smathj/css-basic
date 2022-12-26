@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+}
+
+/* 적용안됨, 그런선택자 없음 */
+.container p:first-child {
+    background: red;
+}
+
+.container p:first-of-type {
+    background: blue;
+}
+
+.container p:last-of-type {
+    background-color: yellow;
+}
+
+
+.container p:nth-of-type(2) {
+    background-color: green;
+}
+
+/*.container span:first-of-type {*/
+.container span:first-child {
+    font-weight: 600;
+    text-decoration: underline;
+
+}
+
