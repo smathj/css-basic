@@ -1,0 +1,18 @@
+* {
+    background: yellow;
+}
+
+
+div {
+    background: aqua;
+}
+
+
+.text-clas {
+    background: blue;
+}
+
+
+#text-id {
+    background: red;
+}
