@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.sidebar {
+    background: orange;
+    width: 170px;
+    padding: 5px 15px;
+
+}
+
+.sidebar ul {
+    width: 100%;
+    padding: 0;
+}
+
+.sidebar ul li {
+    list-style: none;
+    padding: 5px 0;
+    color: #ffffff;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.3); /*30% 불투명도*/
+}
+
+
+.contents {
+    width: calc(100% - 170px);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap; /*넘치면내려*/
+    padding: 0 10px;
+}
+
+.item {
+    width: 24%;
+    height: 180px;
+    background-image: url("/practice/img/natae.jpg");
+    margin-bottom: 10px;
+    background-size: cover;
+}
