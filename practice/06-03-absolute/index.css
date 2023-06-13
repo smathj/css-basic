@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    border: 3px solid red;
+    padding: 10px;
+    position: relative;
+}
+
+.wrapper {
+    border: 3px solid blue;
+    padding: 10px;
+    position: relative;
+}
+
+.item {
+    width: 200px;
+    height: 100px;
+    background-color: orange;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+/*
+
+position: absolute을 등록하면
+가장가까운 position: relative; 속성을 가진 부모를 기준으로한다
+아무것도 없으면 body 태그 기준
+
+*/
