@@ -1,0 +1,11 @@
+* {
+    box-sizing: border-box;
+}
+
+#target {
+    transition: width 0.2s ease-in-out 1s;
+}
+
+#target:hover {
+    width: 100px;
+}
