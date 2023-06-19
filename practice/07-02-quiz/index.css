@@ -30,10 +30,28 @@
     justify-content: center;
     align-items: center;
 
+    /* Test */
+    /*transition: transform 1s ease-in-out;*/
+    transition: all 1s ease-in-out;
+
 }
+
+
+/*Test*/
+.target1:hover {
+
+    transform: scaleY(0.75) skewX(20deg);
+    background-color: orange;
+    color: white;
+    font-size: 25px;
+
+}
+
+/*
 
 .target1 {
 
     transform: scaleY(0.75) skewX(20deg);
 
 }
+*/

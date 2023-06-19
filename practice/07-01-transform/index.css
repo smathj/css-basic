@@ -5,7 +5,7 @@
 .container {
     width: 500px;
     height: 320px;
-    position: relative;
+    position: relative; /* ! 내 자리를 기준으로 쓸꺼야*/
 }
 
 .base {
@@ -20,7 +20,7 @@
     width: 200px;
     height: 200px;
     background: rgba(0, 0, 255, 0.8);
-    position: absolute;
+    position: absolute; /* ! 내 부모를 기준으로 쓸거야 없으면 body를*/
     top: 0;
     left: 0;
     border: 2px solid blue;
