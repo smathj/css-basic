@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+/* ! 여기만 수정하면된다*/
+.itemWrap {
+    /* ? flex 버전
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap; !*이거중요*!
+    */
+
+    /* ? grid 버전*/
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 7px;
+
+
+}
+
+.item {
+    /*? flex 버전*/
+    /*width: calc(25% - 7px);*/
+
+    aspect-ratio: 6 / 5; /*가로 세로 비율 고정*/
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+
+    /*? flex 버전*/
+    /*margin-bottom: 15px;*/
+}
+
+.imgBox {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.imgBox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /*이미지 알짤딱*/
+}
+
+
+.textBox {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 20px;
+    z-index: 3;
+
+}
+
+.textBox p {
+    color: white;
+    margin: 5px 0 0;
+}
+
+.textBox_name {
+    font-size: 22px;
+    font-width: 500;
+    opacity: 0;
+    transform: translateY(50px); /*위에서 아래로 50px*/
+}
+
+.textBox_price {
+    font-size: 16px;
+    font-width: 400;
+    opacity: 0;
+    transform: translateY(50px); /*위에서 아래로 50px*/
+}
+
+.item:after {
+    display: block;
+    content: ""; /*가상선택자에 내부 글자*/
+    background: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    opacity: 0;
+
+}
+
+
+.item:hover:after {
+    opacity: 1;
+}
+
+.item:hover .imgBox img {
+    transform: scale(1.1);
+    filter: blur(3px); /*블러효과 흐릿하게*/
+}
+
+.item:hover .textBox_name {
+    opacity: 1;
+    transform: translateY(0);
+
+}
+
+.item:hover .textBox_price {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.item:after,
+.item .imgBox img,
+.item .textBox_name,
+.item .textBox_price {
+    transition: all 0.4s ease-in-out;
+}
+
+.item .textBox_price {
+    transition: all 0.4s ease-in-out 0.15s; /*딜레이 0.15초 추가*/
+}
