@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+
+}
+
+
+.container > div {
+    margin: 10px;
+}
+
+.box {
+    border: 1px solid black;
+    width: 200px;
+    height: 200px;
+    background-image: url("./img.png");
+    background-size: cover;
+    /*object-fit: cover; !*이미지 알짤딱*!*/
+    transition: background 0.4s ease-in-out;
+    position: relative;
+}
+
+.box1 {
+    border: 1px solid black;
+    width: 200px;
+    height: 200px;
+    background-image: url("./img_1.png");
+    background-size: cover;
+    /*object-fit: cover; !*이미지 알짤딱*!*/
+    transition: background 0.4s ease-in-out;
+    position: relative;
+}
+
+.text {
+    font-size: 20px;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    position: absolute;
+    bottom: -40px;
+    transition: all 0.4s ease-in-out;
+    opacity: 0;
+}
+
+.text1 {
+    font-size: 20px;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    position: absolute;
+    bottom: -10px;
+    transition: all 0.4s ease-in-out;
+    opacity: 0;
+}
+
+
+.box:hover .text {
+    bottom: 40px;
+    opacity: 1;
+}
+
+.box:hover .text1 {
+    bottom: 10px;
+    opacity: 1;
+}
+
+
+.box1:hover .text {
+    bottom: 40px;
+    opacity: 1;
+}
+
+.box1:hover .text1 {
+    bottom: 10px;
+    opacity: 1;
+}

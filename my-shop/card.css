@@ -12,6 +12,7 @@ html, body {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
+    flex-wrap: wrap; /*이거중요*/
 }
 
 .item {
@@ -20,6 +21,7 @@ html, body {
     position: relative;
     overflow: hidden;
     border-radius: 10px;
+    margin-bottom: 15px;
 }
 
 .imgBox {
@@ -59,13 +61,14 @@ html, body {
     font-size: 22px;
     font-width: 500;
     opacity: 0;
+    transform: translateY(50px); /*위에서 아래로 50px*/
 }
 
 .textBox_price {
     font-size: 16px;
     font-width: 400;
     opacity: 0;
-
+    transform: translateY(50px); /*위에서 아래로 50px*/
 }
 
 .item:after {
@@ -94,11 +97,13 @@ html, body {
 
 .item:hover .textBox_name {
     opacity: 1;
+    transform: translateY(0);
 
 }
 
 .item:hover .textBox_price {
     opacity: 1;
+    transform: translateY(0);
 }
 
 .item:after,
@@ -106,4 +111,8 @@ html, body {
 .item .textBox_name,
 .item .textBox_price {
     transition: all 0.4s ease-in-out;
+}
+
+.item .textBox_price {
+    transition: all 0.4s ease-in-out 0.15s; /*딜레이 0.15초 추가*/
 }
